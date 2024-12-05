@@ -129,6 +129,30 @@ Prog/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/build
 .PHONY : Prog/fast
 
+src/game-of-life.obj: src/game-of-life.cpp.obj
+.PHONY : src/game-of-life.obj
+
+# target to build an object file
+src/game-of-life.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/game-of-life.cpp.obj
+.PHONY : src/game-of-life.cpp.obj
+
+src/game-of-life.i: src/game-of-life.cpp.i
+.PHONY : src/game-of-life.i
+
+# target to preprocess a source file
+src/game-of-life.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/game-of-life.cpp.i
+.PHONY : src/game-of-life.cpp.i
+
+src/game-of-life.s: src/game-of-life.cpp.s
+.PHONY : src/game-of-life.s
+
+# target to generate assembly for a file
+src/game-of-life.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/game-of-life.cpp.s
+.PHONY : src/game-of-life.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -153,30 +177,6 @@ src/main.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/texture.obj: src/texture.cpp.obj
-.PHONY : src/texture.obj
-
-# target to build an object file
-src/texture.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/texture.cpp.obj
-.PHONY : src/texture.cpp.obj
-
-src/texture.i: src/texture.cpp.i
-.PHONY : src/texture.i
-
-# target to preprocess a source file
-src/texture.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/texture.cpp.i
-.PHONY : src/texture.cpp.i
-
-src/texture.s: src/texture.cpp.s
-.PHONY : src/texture.s
-
-# target to generate assembly for a file
-src/texture.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/texture.cpp.s
-.PHONY : src/texture.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -186,12 +186,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Prog"
+	@echo "... src/game-of-life.obj"
+	@echo "... src/game-of-life.i"
+	@echo "... src/game-of-life.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/texture.obj"
-	@echo "... src/texture.i"
-	@echo "... src/texture.s"
 .PHONY : help
 
 

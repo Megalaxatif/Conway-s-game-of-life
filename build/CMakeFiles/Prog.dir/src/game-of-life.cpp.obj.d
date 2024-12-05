@@ -1,5 +1,6 @@
-CMakeFiles/Prog.dir/src/main.cpp.obj: \
- D:/Ethan/Projets/Code/formation\ SDL/src/main.cpp \
+CMakeFiles/Prog.dir/src/game-of-life.cpp.obj: \
+ D:/Ethan/Projets/Code/formation\ SDL/src/game-of-life.cpp \
+ D:/Ethan/Projets/Code/formation\ SDL/src/header/textures.h \
  D:/Ethan/Projets/Code/formation\ SDL/include/SDL/SDL.h \
  D:/Ethan/Projets/Code/formation\ SDL/include/SDL/SDL_main.h \
  D:/Ethan/Projets/Code/formation\ SDL/include/SDL/SDL_stdinc.h \
@@ -195,124 +196,52 @@ CMakeFiles/Prog.dir/src/main.cpp.obj: \
  D:/Ethan/Projets/Code/formation\ SDL/include/SDL/SDL_version.h \
  D:/Ethan/Projets/Code/formation\ SDL/include/SDL/SDL_locale.h \
  D:/Ethan/Projets/Code/formation\ SDL/include/SDL/SDL_misc.h \
- C:/MingGW/mingw64/include/c++/14.2.0/iostream \
+ C:/MingGW/mingw64/include/c++/14.2.0/vector \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/requires_hosted.h \
- C:/MingGW/mingw64/include/c++/14.2.0/ostream \
- C:/MingGW/mingw64/include/c++/14.2.0/ios \
- C:/MingGW/mingw64/include/c++/14.2.0/iosfwd \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stringfwd.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/postypes.h \
- C:/MingGW/mingw64/include/c++/14.2.0/cwchar \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/wchar.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/corecrt_stdio_config.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/_mingw_stat64.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/swprintf.inl \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/sec_api/wchar_s.h \
- C:/MingGW/mingw64/include/c++/14.2.0/exception \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/exception.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/version.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/exception_ptr.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/exception_defines.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/cxxabi_init_exception.h \
- C:/MingGW/mingw64/include/c++/14.2.0/typeinfo \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
- C:/MingGW/mingw64/include/c++/14.2.0/new \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/move.h \
- C:/MingGW/mingw64/include/c++/14.2.0/type_traits \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/nested_exception.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/char_traits.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/localefwd.h \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++locale.h \
- C:/MingGW/mingw64/include/c++/14.2.0/clocale \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/locale.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/stdio.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/sec_api/stdio_s.h \
- C:/MingGW/mingw64/include/c++/14.2.0/cctype \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/ctype.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/ios_base.h \
- C:/MingGW/mingw64/include/c++/14.2.0/ext/atomicity.h \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr.h \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/gthr-default.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/pthread.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/signal.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/pthread_signal.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/time.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/sys/timeb.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/sec_api/sys/timeb_s.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/_timeval.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/pthread_time.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/pthread_compat.h \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/pthread_unistd.h \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/atomic_word.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/locale_classes.h \
- C:/MingGW/mingw64/include/c++/14.2.0/string \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/allocator.h \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/functexcept.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/exception_defines.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/cpp_type_traits.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/ostream_insert.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/cxxabi_forced.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/ext/type_traits.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_pair.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/type_traits \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/version.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/move.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/utility.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_iterator_base_funcs.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/concept_check.h \
  C:/MingGW/mingw64/include/c++/14.2.0/debug/assertions.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_iterator_base_types.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_iterator.h \
- C:/MingGW/mingw64/include/c++/14.2.0/ext/type_traits.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/ptr_traits.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_function.h \
- C:/MingGW/mingw64/include/c++/14.2.0/backward/binders.h \
- C:/MingGW/mingw64/include/c++/14.2.0/ext/numeric_traits.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_algobase.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_pair.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/utility.h \
  C:/MingGW/mingw64/include/c++/14.2.0/debug/debug.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/predefined_ops.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bit \
  C:/MingGW/mingw64/include/c++/14.2.0/concepts \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/refwrap.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/invoke.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/range_access.h \
- C:/MingGW/mingw64/include/c++/14.2.0/initializer_list \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/basic_string.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/allocator.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/c++allocator.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/new_allocator.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/new \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/exception.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/memoryfwd.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_construct.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
  C:/MingGW/mingw64/include/c++/14.2.0/ext/alloc_traits.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/alloc_traits.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_construct.h \
- C:/MingGW/mingw64/include/c++/14.2.0/string_view \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_vector.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/initializer_list \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/functional_hash.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/string_view.tcc \
- C:/MingGW/mingw64/include/c++/14.2.0/ext/string_conversions.h \
- C:/MingGW/mingw64/include/c++/14.2.0/cstdio \
- C:/MingGW/mingw64/include/c++/14.2.0/cerrno \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/charconv.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/basic_string.tcc \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/hash_bytes.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/refwrap.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/invoke.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_function.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/backward/binders.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/range_access.h \
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/vector.tcc \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/memory_resource.h \
  C:/MingGW/mingw64/include/c++/14.2.0/cstddef \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/uses_allocator.h \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/uses_allocator_args.h \
- C:/MingGW/mingw64/include/c++/14.2.0/tuple \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/locale_classes.tcc \
- C:/MingGW/mingw64/include/c++/14.2.0/system_error \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/error_constants.h \
- C:/MingGW/mingw64/include/c++/14.2.0/stdexcept \
- C:/MingGW/mingw64/include/c++/14.2.0/streambuf \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/streambuf.tcc \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/basic_ios.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/locale_facets.h \
- C:/MingGW/mingw64/include/c++/14.2.0/cwctype \
- C:/MingGW/mingw64/x86_64-w64-mingw32/include/wctype.h \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_base.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/streambuf_iterator.h \
- C:/MingGW/mingw64/include/c++/14.2.0/x86_64-w64-mingw32/bits/ctype_inline.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/locale_facets.tcc \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/basic_ios.tcc \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/ostream.tcc \
- C:/MingGW/mingw64/include/c++/14.2.0/istream \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/istream.tcc \
- D:/Ethan/Projets/Code/formation\ SDL/src/header/textures.h \
- C:/MingGW/mingw64/include/c++/14.2.0/vector \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_uninitialized.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_vector.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/stl_bvector.h \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/vector.tcc
+ C:/MingGW/mingw64/include/c++/14.2.0/tuple

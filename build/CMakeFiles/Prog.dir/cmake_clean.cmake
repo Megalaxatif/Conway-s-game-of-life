@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/Prog.dir/src/game-of-life.cpp.obj"
+  "CMakeFiles/Prog.dir/src/game-of-life.cpp.obj.d"
   "CMakeFiles/Prog.dir/src/main.cpp.obj"
   "CMakeFiles/Prog.dir/src/main.cpp.obj.d"
-  "CMakeFiles/Prog.dir/src/texture.cpp.obj"
-  "CMakeFiles/Prog.dir/src/texture.cpp.obj.d"
   "Prog.exe"
   "Prog.exe.manifest"
   "Prog.pdb"

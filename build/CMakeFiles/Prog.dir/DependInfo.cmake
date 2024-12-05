@@ -8,8 +8,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "D:/Ethan/Projets/Code/formation SDL/src/game-of-life.cpp" "CMakeFiles/Prog.dir/src/game-of-life.cpp.obj" "gcc" "CMakeFiles/Prog.dir/src/game-of-life.cpp.obj.d"
   "D:/Ethan/Projets/Code/formation SDL/src/main.cpp" "CMakeFiles/Prog.dir/src/main.cpp.obj" "gcc" "CMakeFiles/Prog.dir/src/main.cpp.obj.d"
-  "D:/Ethan/Projets/Code/formation SDL/src/texture.cpp" "CMakeFiles/Prog.dir/src/texture.cpp.obj" "gcc" "CMakeFiles/Prog.dir/src/texture.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

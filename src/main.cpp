@@ -1,55 +1,41 @@
 #include <SDL/SDL.h>
 #include <iostream>
 #include "header/textures.h"
-
 #undef main
 
 int main(int argc, char* argv[]) {
-
-    SDL_Window* window = nullptr;
-    SDL_Renderer* renderer = nullptr;
     SDL_Init(SDL_INIT_VIDEO);
-
-    bool running = true;
+    
+    SDL_Window* window = nullptr;
     SDL_Event event;
-    SDL_Rect rectangle{10, 10, 255, 255};
 
-    SDL_CreateWindowAndRenderer(640*2, 480*2, 0, &window, &renderer);
-    SDL_RenderSetScale(renderer,1, 1);
+    SDL_CreateWindowAndRenderer(SCREEN_W, SCREEN_H, 0, &window, &renderer);
+    SDL_RenderSetScale(renderer, 1, 1);
 
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // clear the screen
+    SDL_RenderClear(renderer);
 
+    CreateGameOfLifeTexture();
     // main loop
+    bool running = true;
     while (running){
         // input handler
         SDL_PollEvent(&event);
         if (event.type == SDL_QUIT) running = false;
         else if (event.type == SDL_KEYDOWN){
             switch (event.key.keysym.sym){
-                case SDLK_RIGHT:
-                    std::cout << "right" << "\n";
-                    rectangle.x +=10;
-                break;
-                case SDLK_LEFT:
-                    std::cout << "left" << "\n";
-                    rectangle.x -=10;
-                break;
-                case SDLK_UP:
-                    std::cout << "up" << "\n";
-                    red_texture(renderer); // if we press the up key we display a red texture on the screen for 5 seconds
-                break;
+                case SDLK_RIGHT : if(sourceRect.x + SPEED + sourceRect.w <= TEXTURE_W)  sourceRect.x += SPEED; break;
+                case SDLK_LEFT  : if(sourceRect.x - SPEED >= 0)                         sourceRect.x -= SPEED; break;
+                case SDLK_UP    : if(sourceRect.y - SPEED >= 0)                         sourceRect.y -= SPEED; break;
+                case SDLK_DOWN  : if(sourceRect.y + SPEED + sourceRect.h <= TEXTURE_H)  sourceRect.y += SPEED; break;
+                case SDLK_1     :                                                       sourceRect.h /= ZOOM; sourceRect.w /= ZOOM; break; // zoom
+                case SDLK_2     :                                                       sourceRect.h *= ZOOM; sourceRect.w *= ZOOM; break; // unzoom
             }
         }
-        else if (event.type==SDL_MOUSEMOTION){
-            SDL_GetMouseState(&rectangle.x, &rectangle.y); 
-        }
-        // clear the screen
-        SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);
-        SDL_RenderClear(renderer);
-
-        // display the rectangle
-        SDL_SetRenderDrawColor(renderer, 255, 0, 255, 255);
-        SDL_RenderFillRect(renderer, &rectangle);
-        SDL_RenderPresent(renderer);  // display function
+        SDL_SetRenderTarget(renderer, nullptr); // draw onto the screen
+        DrawCurrentGeneration();
+        CreateNewGeneration();
+        SDL_Delay(300); // short delay
     }
     return 0;
 }

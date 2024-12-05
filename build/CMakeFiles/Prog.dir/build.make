@@ -87,31 +87,31 @@ CMakeFiles/Prog.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Prog.dir/src/main.cpp.s"
 	C:/MingGW/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:/Ethan/Projets/Code/formation SDL/src/main.cpp" -o CMakeFiles/Prog.dir/src/main.cpp.s
 
-CMakeFiles/Prog.dir/src/texture.cpp.obj: CMakeFiles/Prog.dir/flags.make
-CMakeFiles/Prog.dir/src/texture.cpp.obj: CMakeFiles/Prog.dir/includes_CXX.rsp
-CMakeFiles/Prog.dir/src/texture.cpp.obj: D:/Ethan/Projets/Code/formation\ SDL/src/texture.cpp
-CMakeFiles/Prog.dir/src/texture.cpp.obj: CMakeFiles/Prog.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:/Ethan/Projets/Code/formation SDL/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Prog.dir/src/texture.cpp.obj"
-	C:/MingGW/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Prog.dir/src/texture.cpp.obj -MF CMakeFiles/Prog.dir/src/texture.cpp.obj.d -o CMakeFiles/Prog.dir/src/texture.cpp.obj -c "D:/Ethan/Projets/Code/formation SDL/src/texture.cpp"
+CMakeFiles/Prog.dir/src/game-of-life.cpp.obj: CMakeFiles/Prog.dir/flags.make
+CMakeFiles/Prog.dir/src/game-of-life.cpp.obj: CMakeFiles/Prog.dir/includes_CXX.rsp
+CMakeFiles/Prog.dir/src/game-of-life.cpp.obj: D:/Ethan/Projets/Code/formation\ SDL/src/game-of-life.cpp
+CMakeFiles/Prog.dir/src/game-of-life.cpp.obj: CMakeFiles/Prog.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="D:/Ethan/Projets/Code/formation SDL/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Prog.dir/src/game-of-life.cpp.obj"
+	C:/MingGW/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Prog.dir/src/game-of-life.cpp.obj -MF CMakeFiles/Prog.dir/src/game-of-life.cpp.obj.d -o CMakeFiles/Prog.dir/src/game-of-life.cpp.obj -c "D:/Ethan/Projets/Code/formation SDL/src/game-of-life.cpp"
 
-CMakeFiles/Prog.dir/src/texture.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Prog.dir/src/texture.cpp.i"
-	C:/MingGW/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:/Ethan/Projets/Code/formation SDL/src/texture.cpp" > CMakeFiles/Prog.dir/src/texture.cpp.i
+CMakeFiles/Prog.dir/src/game-of-life.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Prog.dir/src/game-of-life.cpp.i"
+	C:/MingGW/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "D:/Ethan/Projets/Code/formation SDL/src/game-of-life.cpp" > CMakeFiles/Prog.dir/src/game-of-life.cpp.i
 
-CMakeFiles/Prog.dir/src/texture.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Prog.dir/src/texture.cpp.s"
-	C:/MingGW/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:/Ethan/Projets/Code/formation SDL/src/texture.cpp" -o CMakeFiles/Prog.dir/src/texture.cpp.s
+CMakeFiles/Prog.dir/src/game-of-life.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Prog.dir/src/game-of-life.cpp.s"
+	C:/MingGW/mingw64/bin/c++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "D:/Ethan/Projets/Code/formation SDL/src/game-of-life.cpp" -o CMakeFiles/Prog.dir/src/game-of-life.cpp.s
 
 # Object files for target Prog
 Prog_OBJECTS = \
 "CMakeFiles/Prog.dir/src/main.cpp.obj" \
-"CMakeFiles/Prog.dir/src/texture.cpp.obj"
+"CMakeFiles/Prog.dir/src/game-of-life.cpp.obj"
 
 # External object files for target Prog
 Prog_EXTERNAL_OBJECTS =
 
 Prog.exe: CMakeFiles/Prog.dir/src/main.cpp.obj
-Prog.exe: CMakeFiles/Prog.dir/src/texture.cpp.obj
+Prog.exe: CMakeFiles/Prog.dir/src/game-of-life.cpp.obj
 Prog.exe: CMakeFiles/Prog.dir/build.make
 Prog.exe: CMakeFiles/Prog.dir/linkLibs.rsp
 Prog.exe: CMakeFiles/Prog.dir/objects1.rsp
