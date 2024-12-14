@@ -1,4 +1,4 @@
-#include "header/textures.h"
+#include <game-of-life.h>
 #include <random>
 
 SDL_Renderer* renderer = nullptr;
@@ -10,9 +10,18 @@ short int current_array[TEXTURE_W][TEXTURE_H] = { 0 };
 
 void GameOfLifeInit(){
     srand(time(nullptr));
-    for (int i = 0; i < 15000; i++){
-        current_array[rand() % TEXTURE_H][rand() % TEXTURE_W]= 2;
+    for(int y=0; y < TEXTURE_H; y++){
+        for(int x=0; x < TEXTURE_W; x++){
+            current_array[y][x] = 0;                                // first we reset the current array
+        }
     }
+    for (int i = 0; i < 1500; i++){
+        current_array[rand() % TEXTURE_H][rand() % TEXTURE_W]= A;   // then we draw a bunch of random cell to create a new seed
+    }
+}
+void DrawCell(int x, int y){
+    if(current_array[y][x] == A) current_array[y][x] = 0;
+    else current_array[y][x] = A;
 }
 void CreateGameOfLifeTexture(){
     GameOfLifeTexture = SDL_CreateTexture(renderer, SDL_PIXELFORMAT_RGBA8888, SDL_TEXTUREACCESS_TARGET, TEXTURE_W, TEXTURE_H);
@@ -22,20 +31,20 @@ void CreateGameOfLifeTexture(){
 bool isAlive(int x, int y){
     int alive_cells = 0;
 
-    if (x-1 >=0)                                { if (current_array[y][x-1]   == 2) alive_cells ++; } // left
-    if (x+1 <= TEXTURE_W)                       { if (current_array[y][x+1]   == 2) alive_cells ++; } // right
-    if (y-1 >=0)                                { if (current_array[y-1][x]   == 2) alive_cells ++; } // top
-    if (y+1 <= TEXTURE_H)                       { if (current_array[y+1][x]   == 2) alive_cells ++; } // bottom
-    if (y-1 >=0 && x-1 >=0)                     { if (current_array[y-1][x-1] == 2) alive_cells ++; } // top left
-    if (y+1 <= TEXTURE_H && x+1 <= TEXTURE_W)   { if (current_array[y+1][x+1] == 2) alive_cells ++; } // bottom right
-    if (y-1 >=0 && x+1 <= TEXTURE_W)            { if (current_array[y-1][x+1] == 2) alive_cells ++; } // top right
-    if (y+1 <= TEXTURE_H && x-1>=0)             { if (current_array[y+1][x-1] == 2) alive_cells ++; } // bottom left
+    if (x-1 >=0)                                { if (current_array[y][x-1]   == A) alive_cells ++; } // left
+    if (x+1 <= TEXTURE_W)                       { if (current_array[y][x+1]   == A) alive_cells ++; } // right
+    if (y-1 >=0)                                { if (current_array[y-1][x]   == A) alive_cells ++; } // top
+    if (y+1 <= TEXTURE_H)                       { if (current_array[y+1][x]   == A) alive_cells ++; } // bottom
+    if (y-1 >=0 && x-1 >=0)                     { if (current_array[y-1][x-1] == A) alive_cells ++; } // top left
+    if (y+1 <= TEXTURE_H && x+1 <= TEXTURE_W)   { if (current_array[y+1][x+1] == A) alive_cells ++; } // bottom right
+    if (y-1 >=0 && x+1 <= TEXTURE_W)            { if (current_array[y-1][x+1] == A) alive_cells ++; } // top right
+    if (y+1 <= TEXTURE_H && x-1>=0)             { if (current_array[y+1][x-1] == A) alive_cells ++; } // bottom left
 
     if (current_array[y][x] == 0){
         if (alive_cells == 3) return true;
         return false;
     }
-    else if (current_array[y][x] == 2){
+    else if (current_array[y][x] == A){
         if(alive_cells == 2 || alive_cells == 3) return true;
         return false;
     }
@@ -47,7 +56,7 @@ void CreateNewGeneration(){
     // look inside the current array for every living cell and copy paste them into new_array
     for(int y=0; y < TEXTURE_H; y++){
         for(int x=0; x < TEXTURE_W; x++){
-            if (isAlive(x,y)) new_array[y][x] = 2;
+            if (isAlive(x,y)) new_array[y][x] = A;
         }
     }
     // copy new_array in current_array
@@ -65,11 +74,20 @@ void DrawCurrentGeneration(){
     SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // we draw the cells in black
     for(int y=0; y < TEXTURE_H; y++){
         for(int x=0; x < TEXTURE_W; x++){
-            if (current_array[y][x] == 2) SDL_RenderDrawPoint(renderer, x, y);
+            if (current_array[y][x] == A) SDL_RenderDrawPoint(renderer, x, y);
         }
     }
     // draw the generation on the window
     SDL_SetRenderTarget(renderer, nullptr);
     SDL_RenderCopy(renderer, GameOfLifeTexture, &sourceRect, &destRect);
     SDL_RenderPresent(renderer);
+}
+void DrawCurrentArray(){
+    for(int y=0; y < TEXTURE_H; y++){
+        for(int x=0; x < TEXTURE_W; x++){
+           printf("%i", current_array [y][x]);
+        }
+        printf("\n");
+    }
+    printf("\n");
 }

@@ -310,11 +310,12 @@ CMakeFiles/Prog.dir/src/main.cpp.obj: \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/ostream.tcc \
  C:/MingGW/mingw64/include/c++/14.2.0/istream \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/istream.tcc \
- D:/Ethan/Projets/Code/formation\ SDL/src/header/textures.h \
+ D:/Ethan/Projets/Code/formation\ SDL/src/header/game-of-life.h \
  C:/MingGW/mingw64/include/c++/14.2.0/ctime \
  C:/MingGW/mingw64/include/c++/14.2.0/chrono \
  C:/MingGW/mingw64/include/c++/14.2.0/bits/chrono.h \
  C:/MingGW/mingw64/include/c++/14.2.0/ratio \
  C:/MingGW/mingw64/include/c++/14.2.0/cstdint \
  C:/MingGW/mingw64/include/c++/14.2.0/limits \
- C:/MingGW/mingw64/include/c++/14.2.0/bits/parse_numbers.h
+ C:/MingGW/mingw64/include/c++/14.2.0/bits/parse_numbers.h \
+ D:/Ethan/Projets/Code/formation\ SDL/src/header/input.h

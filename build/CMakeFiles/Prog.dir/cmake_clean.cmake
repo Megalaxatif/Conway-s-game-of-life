@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Prog.dir/src/game-of-life.cpp.obj"
   "CMakeFiles/Prog.dir/src/game-of-life.cpp.obj.d"
+  "CMakeFiles/Prog.dir/src/input.cpp.obj"
+  "CMakeFiles/Prog.dir/src/input.cpp.obj.d"
   "CMakeFiles/Prog.dir/src/main.cpp.obj"
   "CMakeFiles/Prog.dir/src/main.cpp.obj.d"
   "Prog.exe"

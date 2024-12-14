@@ -4,8 +4,7 @@ set(EXEC_NAME "Prog")
 
 project(formation-SDL)
 
-
-add_executable(${EXEC_NAME} src/main.cpp src/game-of-life.cpp)
+add_executable(${EXEC_NAME} src/main.cpp src/game-of-life.cpp src/input.cpp)
 
 target_include_directories(${EXEC_NAME} PUBLIC include src/header)
 

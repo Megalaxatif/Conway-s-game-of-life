@@ -153,6 +153,30 @@ src/game-of-life.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/game-of-life.cpp.s
 .PHONY : src/game-of-life.cpp.s
 
+src/input.obj: src/input.cpp.obj
+.PHONY : src/input.obj
+
+# target to build an object file
+src/input.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/input.cpp.obj
+.PHONY : src/input.cpp.obj
+
+src/input.i: src/input.cpp.i
+.PHONY : src/input.i
+
+# target to preprocess a source file
+src/input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/input.cpp.i
+.PHONY : src/input.cpp.i
+
+src/input.s: src/input.cpp.s
+.PHONY : src/input.s
+
+# target to generate assembly for a file
+src/input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Prog.dir/build.make CMakeFiles/Prog.dir/src/input.cpp.s
+.PHONY : src/input.cpp.s
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -189,6 +213,9 @@ help:
 	@echo "... src/game-of-life.obj"
 	@echo "... src/game-of-life.i"
 	@echo "... src/game-of-life.s"
+	@echo "... src/input.obj"
+	@echo "... src/input.i"
+	@echo "... src/input.s"
 	@echo "... src/main.obj"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
