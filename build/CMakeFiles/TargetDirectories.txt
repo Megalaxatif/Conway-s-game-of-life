@@ -1,3 +1,0 @@
-D:/Ethan/Projets/Code/formation SDL/build/CMakeFiles/Prog.dir
-D:/Ethan/Projets/Code/formation SDL/build/CMakeFiles/edit_cache.dir
-D:/Ethan/Projets/Code/formation SDL/build/CMakeFiles/rebuild_cache.dir
