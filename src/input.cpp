@@ -17,7 +17,7 @@ void InputHandler(){
                 case SDLK_r         :                                                       GameOfLifeInit();                                        break; // reset the seed
                 case SDLK_KP_PLUS   : if (delay + DELAY <= 1000)                            delay += DELAY; std::cout << "delay: " << delay << "\n"; break; // slow down the generation
                 case SDLK_KP_MINUS  : if (delay - DELAY >= 0)                               delay -= DELAY; std::cout << "delay: " << delay << "\n"; break; // accelerate the generation
-                case SDLK_RETURN    :                                                       generating = !generating;                                              break; // pause the game or unpause it 
+                case SDLK_RETURN    :                                                       generating = !generating;                                break; // pause the game or unpause it 
             }
         }
         else if (event.type == SDL_MOUSEBUTTONDOWN){

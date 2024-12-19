@@ -4,12 +4,13 @@
 #include <chrono>
 #include <iostream>
 
-#define TEXTURE_H 100
-#define TEXTURE_W 100
-#define SCREEN_H  500
-#define SCREEN_W  500
-#define SPEED 10
-#define ZOOM 5
+#define TEXTURE_H 500
+#define TEXTURE_W 500
+#define SCREEN_H  1000
+#define SCREEN_W  1000
+#define CELL_INIT 25000 // the number of cells generated for each new seed. this number needs to be adapted accordingly with the texture size 
+#define SPEED 20
+#define ZOOM 20
 #define DELAY 10
 #define A 1             // the digit representing an alive cell in the arrays
 

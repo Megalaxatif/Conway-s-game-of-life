@@ -15,7 +15,7 @@ void GameOfLifeInit(){
             current_array[y][x] = 0;                                // first we reset the current array
         }
     }
-    for (int i = 0; i < 1500; i++){
+    for (int i = 0; i < CELL_INIT; i++){
         current_array[rand() % TEXTURE_H][rand() % TEXTURE_W]= A;   // then we draw a bunch of random cell to create a new seed
     }
 }
@@ -68,10 +68,10 @@ void CreateNewGeneration(){
 }
 // draw one pixel on the texture for each
 void DrawCurrentGeneration(){
-    SDL_SetRenderTarget(renderer, GameOfLifeTexture); // we draw on GameOfLife texture
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // we clear the screen in white
+    SDL_SetRenderTarget(renderer, GameOfLifeTexture);       // we draw on GameOfLife texture
+    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255);   // we clear the screen in white
     SDL_RenderClear(renderer);
-    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255); // we draw the cells in black
+    SDL_SetRenderDrawColor(renderer, 0, 0, 0, 255);         // we draw the cells in black
     for(int y=0; y < TEXTURE_H; y++){
         for(int x=0; x < TEXTURE_W; x++){
             if (current_array[y][x] == A) SDL_RenderDrawPoint(renderer, x, y);
