@@ -1,4 +1,6 @@
+#include <global.h>
 #include <input.h>
+#include <imgui_impl_sdl2.h>         // backend
 
 bool running = true;
 bool generating = true;
@@ -7,6 +9,7 @@ SDL_Event event;
 
 void InputHandler(){
     SDL_PollEvent(&event);
+    ImGui_ImplSDL2_ProcessEvent(&event); // send the event to imgui (really important)
     if (event.type == SDL_QUIT) running = false;
         else if (event.type == SDL_KEYDOWN){
             switch (event.key.keysym.sym){
@@ -15,7 +18,7 @@ void InputHandler(){
                 case SDLK_UP        : if(sourceRect.y - SPEED >= 0)                         sourceRect.y -= SPEED;                                   break;
                 case SDLK_DOWN      : if(sourceRect.y + SPEED + sourceRect.h <= TEXTURE_H)  sourceRect.y += SPEED;                                   break;
                 case SDLK_r         :                                                       GameOfLifeInit();                                        break; // reset the seed
-                case SDLK_KP_PLUS   : if (delay + DELAY <= 1000)                            delay += DELAY; std::cout << "delay: " << delay << "\n"; break; // slow down the generation
+                case SDLK_KP_PLUS   : if (delay + DELAY <= DELAY_MAX)                       delay += DELAY; std::cout << "delay: " << delay << "\n"; break; // slow down the generation
                 case SDLK_KP_MINUS  : if (delay - DELAY >= 0)                               delay -= DELAY; std::cout << "delay: " << delay << "\n"; break; // accelerate the generation
                 case SDLK_RETURN    :                                                       generating = !generating;                                break; // pause the game or unpause it 
             }

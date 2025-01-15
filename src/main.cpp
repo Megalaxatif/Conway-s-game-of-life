@@ -1,25 +1,26 @@
-#include <SDL/SDL.h>
-#include <iostream>
 #include <game-of-life.h>
 #include <input.h>
+#include <init.h>
+#include <global.h>
+#include <imgui-windows.h>
+
 #undef main
 
+SDL_Renderer* renderer = nullptr;
+SDL_Window* window = nullptr;
+
 int main(int argc, char* argv[]) {
-    SDL_Init(SDL_INIT_VIDEO);
-    SDL_Window* window = nullptr;
+    // SDL and ImGui
+    if(InitSDL() == -1) return -1;
+    if(InitImGui() == -1) return -1;
 
-    SDL_CreateWindowAndRenderer(SCREEN_W, SCREEN_H, 0, &window, &renderer);
-    SDL_RenderSetScale(renderer, 1, 1);
-
-    SDL_SetRenderDrawColor(renderer, 255, 255, 255, 255); // clear the screen
-    SDL_RenderClear(renderer);
-
+    // Game of life
     GameOfLifeInit();
     CreateGameOfLifeTexture();
 
-    // main loop
     auto start = std::chrono::high_resolution_clock::now();
-
+    
+    // main loop
     while (running){
         InputHandler(); // input handler
 
@@ -29,12 +30,22 @@ int main(int argc, char* argv[]) {
             // fix the speed between the generations
             if (elapsed.count() >= delay){
                 start = std::chrono::high_resolution_clock::now();
-                CreateNewGeneration();
-                //DrawCurrentArray();
+                CreateNewGenArray();            // create the array
+                CreateNewGenTexture();          // create the texture based on the data in the array
             }
-        }
-            DrawCurrentGeneration();
-            SDL_Delay(5); // little delay not to burn the cpu ;)
+        }    
+        StartImGuiWindowCreation();     // start creating the windows
+
+        CreateImGuiWindow1();           // generation settings management window
+        CreateImGuiWindow2();           // cell color  management window
+
+        EndImGuiWindowCreation();       // We can't create additional windows after this
+
+        DisplayNewGenTextureAndImGui(); // final draw call that displays the texture along with ImGui
+
+        SDL_Delay(5);                   // little delay not to burn the cpu ;)
     }
+    DestroyImGui();
+    DestroySDL();
     return 0;
 }

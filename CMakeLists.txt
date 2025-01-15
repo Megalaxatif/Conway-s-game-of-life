@@ -4,9 +4,12 @@ set(EXEC_NAME "Prog")
 
 project(formation-SDL)
 
-add_executable(${EXEC_NAME} src/main.cpp src/game-of-life.cpp src/input.cpp)
+file(GLOB IMGUI_FILES "src/imgui/*.cpp")
+file(GLOB SRC_FILES "src/*.cpp")
 
-target_include_directories(${EXEC_NAME} PUBLIC include src/header)
+add_executable(${EXEC_NAME} ${SRC_FILES} ${IMGUI_FILES})
+
+target_include_directories(${EXEC_NAME} PUBLIC include src/header src/imgui)
 
 target_link_directories(${EXEC_NAME} PRIVATE lib)
 
