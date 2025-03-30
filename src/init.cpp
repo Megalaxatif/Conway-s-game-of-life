@@ -2,7 +2,6 @@
 #include <global.h>
 
 int InitImGui(){
-    // TODO: error handling
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;

@@ -21,7 +21,7 @@ extern SDL_Texture* gameOfLifeTexture;  // main texture
 extern SDL_Renderer* renderer;
 extern SDL_Window* window;
 
-extern float cellColor_a[4];
+extern float aliveCellColor_a[4];
 
 extern bool running;
 extern bool generating;
