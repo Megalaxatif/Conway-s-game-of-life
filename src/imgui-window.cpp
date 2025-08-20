@@ -18,16 +18,25 @@ void CreateImGuiWindow1(){
     ImGui::SliderInt("##slider1", &delay, 0, DELAY_MAX);
     ImGui::Dummy(ImVec2(0.0f, 5.0f));
 
-    if(ImGui::Button("pause button", ImVec2(100, 30))){
+    if(ImGui::Button("play/stop", ImVec2(100, 30))){
         generating = !generating;
     }
     ImGui::SameLine();
     
-    if(ImGui::Button("reset button", ImVec2(100, 30))){
+    if(ImGui::Button("reset", ImVec2(100, 30))){
         GameOfLifeInit();   // reset the seed
+        generating = true;
     }
-    if(ImGui::Button("clear button", ImVec2(100, 30))){
+    if(ImGui::Button("step", ImVec2(100, 30))){
+        generating = false; // stop the automatic generation
+        step = true;        // now we generate step by step
+    }
+
+    ImGui::SameLine();
+
+    if(ImGui::Button("clear", ImVec2(100, 30))){
         ClearCurrentGenerationArray();   // reset the seed
+        generating = false;
     }
     ImGui::End();
 }

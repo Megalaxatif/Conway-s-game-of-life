@@ -17,7 +17,7 @@ int InitSDL(){
         return -1;
     }
     window = SDL_CreateWindow(
-        "Game Of Life",
+        "GUI lib",
         SDL_WINDOWPOS_CENTERED,
         SDL_WINDOWPOS_CENTERED,
         SCREEN_W,
@@ -29,12 +29,17 @@ int InitSDL(){
         std::cerr << "Window initialisation error" << std::endl;
         return -1;
     }
-    renderer = SDL_CreateRenderer(window, -1, 0);
+    renderer = SDL_CreateRenderer(window, -1, SDL_RENDERER_ACCELERATED | SDL_RENDERER_PRESENTVSYNC);
 
     if(!renderer){
         std::cerr << "renderer initialisation error" << std::endl;
         return -1;
     }
+
+    SDL_RendererInfo info;
+    SDL_GetRendererInfo(renderer, &info);
+    printf("Renderer name: %s\n", info.name);
+
     return 0;
 }
 

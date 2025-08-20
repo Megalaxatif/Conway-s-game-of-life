@@ -3,13 +3,7 @@
 #include <imgui_impl_sdlrenderer2.h> // backend
 #include <random>
 
-SDL_Texture* gameOfLifeTexture = nullptr;
-SDL_Rect sourceRect {0, 0, TEXTURE_W, TEXTURE_H};
-SDL_Rect destRect {10, 10, SCREEN_W -20, SCREEN_H -20};
-
 short int currentGeneration_a[TEXTURE_W][TEXTURE_H] = { 0 };
-float aliveCellColor_a[4] = { 0.85f, 0.85f, 0.85f, 1.0f };
-float deadCellColor_a[4] = { 0.12f, 0.12f, 0.12f, 1.0f };
 
 void GameOfLifeInit(){
     srand(time(nullptr));

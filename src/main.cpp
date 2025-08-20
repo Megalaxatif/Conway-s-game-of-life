@@ -6,9 +6,6 @@
 
 #undef main
 
-SDL_Renderer* renderer = nullptr;
-SDL_Window* window = nullptr;
-
 int main(int argc, char* argv[]) {
     // SDL and ImGui
     if(InitSDL() == -1) return -1;
@@ -22,18 +19,24 @@ int main(int argc, char* argv[]) {
     
     // main loop
     while (running){
-        InputHandler(); // input handler
+        InputHandler();                 // input handler
 
-        if (generating){
+        if (generating){                // automatic generation
             auto end = std::chrono::high_resolution_clock::now();
             auto elapsed = std::chrono::duration_cast<std::chrono::milliseconds>(end - start);
             // fix the speed between the generations
             if (elapsed.count() >= delay){
                 start = std::chrono::high_resolution_clock::now();
-                CreateNewGenArray();            // create the array
-                CreateNewGenTexture();          // create the texture based on the data in the array
+                CreateNewGenArray();    // create the array
+                CreateNewGenTexture();  // create the texture based on the data in the array
             }
-        }    
+        }
+        else if (step){                 // step generation
+            CreateNewGenArray();        // create the array
+            CreateNewGenTexture();      // create the texture based on the data in the array
+            step = false;
+        }
+
         StartImGuiWindowCreation();     // start creating the windows
 
         CreateImGuiWindow1();           // generation settings management window
